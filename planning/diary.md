@@ -10,7 +10,7 @@ this is the initial plan.
 
 ### creating users collection with validation
 
-```mongodb
+```sql
 
 db.createCollection("users", {
   validator: {
