@@ -36,4 +36,33 @@ db.createCollection("users", {
 });
 
 ```
+### Adding a user
 
+```sql
+
+db.users.insertOne({
+  name: "chamara",
+  email: "ccweerasinghe1994@gmail.com",
+});
+
+```
+### getting the created users
+
+```sql
+
+db.users.find();
+
+````
+
+output
+```json
+[
+  {
+    "_id": {"$oid": "6220f546f6c3f559b1e738ff"},
+    "email": "ccweerasinghe1994@gmail.com",
+    "name": "chamara",
+    "password": "123"
+  }
+]
+
+```
