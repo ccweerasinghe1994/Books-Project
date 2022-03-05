@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run watch --prefix server"
+    "start": "npm run watch --prefix server",
+    "test":"npm test --prefix server"
   },
   "repository": {
     "type": "git",

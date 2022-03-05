@@ -6,10 +6,11 @@ const client = new MongoClient(URI);
 
 async function mongoConnect() {
   // Connect the client to the server
-  await client.connect();
+  const response = await client.connect();
   // Establish and verify connection
-  await client.db("admin").command({ ping: 1 });
+  // await client.db("admin").command({ ping: 1 });
   console.log("Connected successfully to MongoDB Atlas");
+  return response;
 }
 
 async function mongoDisconnect() {
