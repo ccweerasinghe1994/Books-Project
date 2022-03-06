@@ -1,9 +1,7 @@
-const { MongoClient } = require("mongodb");
 const {
   mongoConnect,
   mongoDisconnect,
 } = require("../src/services/mongo.service");
-const URI = `mongodb+srv://m220student:m220password@mflix.yfnoj.mongodb.net/mflix?retryWrites=true&w=majority`;
 
 describe("Mongo Test", () => {
   let client;
@@ -34,5 +32,12 @@ describe("Mongo Test", () => {
     expectedCollectionNames.map((collection) =>
       expect(actualCollectionNames).toContain(collection)
     );
+
+    const movies = mflixDB.collection("movies");
+
+    const numMovies = await movies.countDocuments();
+
+    expect(numMovies).toBe(23530);
   });
+  test("Testing Movies Collection", () => {});
 });
