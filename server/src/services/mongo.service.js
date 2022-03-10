@@ -12,7 +12,7 @@ async function mongoConnect() {
   connectedClient = await client.connect();
   // Establish and verify connection
   // await client.db("admin").command({ ping: 1 });
-  console.log("Connected successfully to MongoDB Atlas");
+  console.log("Connected successfully to MongoDB Local server");
 
   // console.log(
   //   await response
